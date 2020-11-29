@@ -70,11 +70,9 @@ Have you ever wanted an application that hosts your bucket list activities so yo
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+[Component tree](https://whimsical.com/bucket-list-VZiaPda6sk82NC2m5maRmP)
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -102,12 +100,10 @@ src
       |__ Layout.jsx
       |__ Layout.css
 |__ screens/
-      |__ Activity_Detail.jsx
-      |__ Activity_Detail.jsx
-      |__ AddActivities.css
-      |__ AddActivities.css
-      |__ AddActivities.jsx
-      |__ AddActivities.css
+      |__ ActivityDetail.jsx
+      |__ ActivityDetail.jsx
+      |__ AddActivity.jsx
+      |__ AddActivity.css
       |__ AllActivities.jsx
       |__ AllActivities.css
       |__ EditActivity.jsx
@@ -126,11 +122,6 @@ src
       
 
 ```
-
-#### Component Tree
-
-
-[Component tree](url)
 
 #### Time Estimates
 
@@ -176,6 +167,7 @@ https://drive.google.com/file/d/1d24SUm_2Cw-WJfTTnXXNypSUAO-Llyj0/view?usp=shari
 - User favorites / Indexing of activities up or down (like system)
 - Searching and sorting of activities
 - Edit and deleting of comments
+- user page with a collection of all of their activities
 
 ***
 
