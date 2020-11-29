@@ -36,6 +36,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | Styled Components | _Lorem ipsum dolor sit amet, consectetur._ |
 |     Ruby      | _Lorem ipsum dolor sit amet, consectetur._ |
 |  Ruby on Rails  | _Lorem ipsum dolor sit amet, consectetur._ |
+|  Postgresql  | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
