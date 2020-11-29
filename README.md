@@ -2,26 +2,25 @@
 
 ## Overview
 
-**Bucket-List** is a website that allows users to post and save their bucket list activities. Posts are public which allow other members to comment on the activities and provide feedback/support to the user who posted the bucket list activity. Users are encouraged to share the website with their friends and family who can comment on activities that they would like to join in on. 
+Have you ever wanted an application that hosts your bucket list activities so you can reference them anytime you want? **Bucket-List** is a website that does just that -it allows users to post and save their bucket list activities on one site. Posts are public which allow other members to comment on the activities and provide feedback/support to the user who posted the bucket list activity. Users are encouraged to share the website with their friends and family who can comment on activities that they would like to join in on. 
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+- Build a **Ruby on Rails** server, exposing RESTful JSON endpoints
+- Build a database with 3 tables, utilize **Rails** to define models and controllers for Full CRUD
+- Interactive **React** app with 8 separate rendered components in an appropriate file structure
+- Build full CRUD around the Activity posts  
+- Styled appropriately using CSS Flexbox
+- Implement 2 media queries for responsive design (tablet, mobile, and desktop).
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Create a fully functional **React** app with Full CRUD around bucket-list activities using **Ruby on Rails** for the backend that allows user authentication. 
 
 <br>
 
@@ -31,12 +30,11 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Styled Components | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Ruby      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Ruby on Rails  | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Postgresql  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front End Framework for a dynamic SPA |
+|   React Router   | Navigation Routing within the SPA |
+| Axios | Allows for API calls|
+|  Ruby on Rails  | Backend Framework and will be hosting logic for user authentication |
+|  Postgresql  | Relational database that will allow the client to interact with the data |
 
 <br>
 
@@ -81,20 +79,56 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 ``` structure
 
 src
+|__ App.js
+|__ App.css
+|__ index.js
+|__ index.css
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
       |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Header.css
+      |__ Footer.jsx
+      |__ Footer.css
+      |__ Nav.jsx
+      |__ Nav.css
+      |__ Comments.jsx
+      |__ Comments.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ layout/
+      |__ Layout.jsx
+      |__ Layout.css
+|__ screens/
+      |__ Activity_Detail.jsx
+      |__ Activity_Detail.jsx
+      |__ AddActivities.css
+      |__ AddActivities.css
+      |__ AddActivities.jsx
+      |__ AddActivities.css
+      |__ AllActivities.jsx
+      |__ AllActivities.css
+      |__ EditActivity.jsx
+      |__ EditActivity.css
+      |__ Landing.jsx
+      |__ Landing.css
+      |__ Login.jsx
+      |__ Login.css
+      |__ Register.jsx
+      |__ Register.css
 |__ services/
+      |__ apiConfig.js
+      |__ activities.js
+      |__ auth.js
+      |__ comments.js
+      
 
 ```
 
 #### Component Tree
 
-> Use this section to include a link to your component tree.
 
 [Component tree](url)
 
@@ -104,11 +138,25 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Setup Ruby Boilerplate    |    H     |     3 hrs      |     TBD     |    TBD    |
+| Setup models, controllers and routes    |    H     |     3 hrs      |     TBD     |    TBD    |
+| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     |
+| Create Seed Data |    L     |     4 hrs      |     TBD     |     TBD     |
+| Test Data/Routes with Postico and Postman |    M     |     1 hr      |     TBD     |     TBD     |
+| Connect Backend with Frontend |    H     |     1 hr      |     TBD     |     TBD     |
+| Create Login Form |    H     |     2 hrs      |     TBD     |     TBD     |
+| Create Register Form |    H     |     3 hrs      |     TBD     |     TBD     |
+| User Auth Logic Front/Backend |    H     |     5 hrs      |     TBD     |     TBD     |
+| Render All Activity |    H     |     3 hrs      |     TBD     |     TBD     |
+| Implement CRUD on Front End |    H     |     6 hrs      |     TBD     |     TBD     |
+| Implement Comments on Activity Detail Page |    H     |     6 hrs      |     TBD     |     TBD     |
+| CSS Styling Basic |    H     |     3 hrs      |     TBD     |     TBD     |
+| CSS Styling Advanced |    M     |     5 hrs      |     TBD     |     TBD     |
+| Mobile Queries |    M     |     2 hrs      |     TBD     |     TBD     |
+| Debugging |    H     |     6 hrs      |     TBD     |     TBD     |
+| Deployment |    H     |     3 hrs      |     TBD     |     TBD     |
+| TOTAL               |          |     59 hrs      |     TBD     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -124,7 +172,10 @@ https://drive.google.com/file/d/1d24SUm_2Cw-WJfTTnXXNypSUAO-Llyj0/view?usp=shari
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Require auth for users to comment on other users activities
+- User favorites / Indexing of activities up or down (like system)
+- Searching and sorting of activities
+- Edit and deleting of comments
 
 ***
 
