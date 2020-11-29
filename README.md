@@ -42,31 +42,8 @@ Have you ever wanted an application that hosts your bucket list activities so yo
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+[Wireframe](https://www.figma.com/file/GtYOykC0r5eKcELq90vBVd/Bucket-List?node-id=0%3A1)
 
 #### Component Tree
 
@@ -101,7 +78,7 @@ src
       |__ Layout.css
 |__ screens/
       |__ ActivityDetail.jsx
-      |__ ActivityDetail.jsx
+      |__ ActivityDetail.css
       |__ AddActivity.jsx
       |__ AddActivity.css
       |__ AllActivities.jsx
