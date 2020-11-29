@@ -33,9 +33,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | :--------------: | :----------------------------------------- |
 |      React       | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+| Styled Components | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Ruby      | _Lorem ipsum dolor sit amet, consectetur._ |
+|  Ruby on Rails  | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
