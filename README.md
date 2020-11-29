@@ -2,7 +2,7 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+**Bucket-List** is a website that allows users to post and save their bucket list activities. Posts are public which allow other members to comment on the activities and provide feedback/support to the user who posted the bucket list activity. Users are encouraged to share the website with their friends and family who can comment on activities that they would like to join in on. 
 
 
 <br>
