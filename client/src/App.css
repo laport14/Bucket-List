@@ -15,5 +15,18 @@
 }
 
 .global-button:hover {
-  background-color: #1F5E57;
+  background-color: #FF717A;
+  color: #1F5E57;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFC4C3;
+  height: 83vh;
+  }
+
+a {
+  text-decoration: none;
 }

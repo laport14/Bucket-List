@@ -1,10 +1,13 @@
 import React from 'react';
+import Layout from '../../components/shared/Layout/Layout';
 
 function Login(props) {
   return (
-    <div>
+    <Layout>
+      <div className='content-container'>
       
-    </div>
+      </div>
+    </Layout>
   );
 }
 
