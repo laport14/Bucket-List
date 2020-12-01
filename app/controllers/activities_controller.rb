@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: [:show, :add_comment]
+  before_action :set_activity, only: :show
   before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_user_activity, only: [:update, :destroy]
 
@@ -40,13 +40,6 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.destroy
   end
-
-  # def add_comment
-  #   @comment = Activity.find(params[:comment_id])
-  #   @activity.comments << @comment
-
-  #   render json: @activity, include: :comments
-  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
