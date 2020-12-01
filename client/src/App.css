@@ -15,5 +15,6 @@
 }
 
 .global-button:hover {
-  background-color: #1F5E57;
+  background-color: #FF717A;
+  color: #1F5E57;
 }
