@@ -1,13 +1,3 @@
-.content-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 83vh;
-}
-
-.hero-container {
-  
-}
 
 .hero-text {
 font-size: 50px;
