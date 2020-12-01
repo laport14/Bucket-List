@@ -1,0 +1,65 @@
+class ActivitiesController < ApplicationController
+  before_action :set_activity, only: [:show, :add_comment]
+  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_user_activity, only: [:update, :destroy]
+
+  # GET /activities
+  def index
+    @activities = Activity.all
+
+    render json: @activities
+  end
+
+  # GET /activities/1
+  def show
+    render json: @activity, include: :comments
+  end
+
+  # POST /activities
+  def create
+    @activity = Activity.new(activity_params)
+    @activity.user = @current_user
+
+    if @activity.save
+      render json: @activity, status: :created, location: @activity
+    else
+      render json: @activity.errors, status: :unprocessable_entity
+    end
+  end
+
+  # PATCH/PUT /activities/1
+  def update
+    if @activity.update(activity_params)
+      render json: @activity
+    else
+      render json: @activity.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /activities/1
+  def destroy
+    @activity.destroy
+  end
+
+  # def add_comment
+  #   @comment = Activity.find(params[:comment_id])
+  #   @activity.comments << @comment
+
+  #   render json: @activity, include: :comments
+  # end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_activity
+      @activity = Activity.find(params[:id])
+    end
+
+    def set_user_activity
+      @activity = @current_user.activities.find(params[:id])
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def activity_params
+      params.require(:activity).permit(:name, :description, :price, :location)
+    end
+end
