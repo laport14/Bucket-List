@@ -2,3 +2,18 @@
   text-align: center;
 }
 
+.global-button {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #1F5E57;
+  border: 0;
+  width: 200px;
+  height: 30px;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 30px auto;
+}
+
+.global-button:hover {
+  background-color: #1F5E57;
+}

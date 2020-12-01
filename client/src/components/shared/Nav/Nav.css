@@ -1,0 +1,43 @@
+.nav-bar {
+  background-color: #1F5E57;
+  display: -webkit-flex;
+  height: 12vh;
+  width: 100vw;
+}
+
+.nav-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.app-name {
+color: #FFC4C3;
+font-size: 24px;
+font-weight: bold;
+}
+
+.nav-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.nav-button-div {
+display: flex;
+justify-content: flex-end;
+}
+
+.nav-button {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #FF717A;
+  border: 0;
+  width: 200px;
+  height: 30px;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 2%;
+  /* margin: 30px auto; */
+}
