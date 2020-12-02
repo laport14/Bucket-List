@@ -3,7 +3,7 @@ import {Route, Switch, useHistory} from 'react-router-dom'
 import Landing from './screens/Landing/Landing';
 import Login from './screens/Login/Login'
 import Register from './screens/Register/Register';
-import { loginUser, removeToken, verifyUser } from './services/auth';
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import { useEffect, useState } from 'react';
 import Layout from './components/shared/Layout/Layout';
 
@@ -28,6 +28,12 @@ function App() {
     history.push('/')
   }
 
+  const handleRegister = async (registerData) => {
+    const userData = await registerUser(registerData);
+    setCurrentUser(userData);
+    history.push('/');
+  }
+
   const handleLogout = () => {
     setCurrentUser(null)
     localStorage.removeItem('authToken')
@@ -47,7 +53,9 @@ function App() {
           <Route exact path='/Login'>
             <Login handleLogin={handleLogin} />
           </Route>
-          <Route exact path='/Register' component={Register} />
+          <Route exact path='/Register'>
+            <Register handleRegister={handleRegister}/>
+          </Route>
         </Switch>
       </Layout>
     </div>

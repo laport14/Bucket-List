@@ -22,7 +22,8 @@ function Login(props) {
         <form className='login-form' onSubmit={(e) => {
           e.preventDefault()
           props.handleLogin(formData)
-        }}>
+      }}>
+        <h2>Login</h2>
           <label htmlFor='username'>Username</label>
           <input
             type='text'
