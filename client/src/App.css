@@ -27,6 +27,11 @@
   height: 83vh;
   }
 
+  .hero-text {
+    font-size: 50px;
+    font-weight: bold;
+    }
+
 a {
   text-decoration: none;
 }

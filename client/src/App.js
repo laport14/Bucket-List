@@ -1,17 +1,55 @@
 import './App.css';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, useHistory} from 'react-router-dom'
 import Landing from './screens/Landing/Landing';
 import Login from './screens/Login/Login'
 import Register from './screens/Register/Register';
+import { loginUser, removeToken, verifyUser } from './services/auth';
+import { useEffect, useState } from 'react';
+import Layout from './components/shared/Layout/Layout';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null)
+  const history = useHistory()
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser()
+      setCurrentUser(userData)
+      if (!userData) {
+        history.push('/')
+      }
+    }
+    handleVerify()
+  }, [])
+
+  const handleLogin = async (loginData) => {
+    const userData = await loginUser(loginData)
+    setCurrentUser(userData)
+    history.push('/')
+  }
+
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken')
+    removeToken()
+    history.push('/')
+  }
+
+
   return (
     <div className="App">
-      <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/Login' component={Login} />
-        <Route exact path='/Register' component={Register} />
-      </Switch>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/Login'>
+            <Login handleLogin={handleLogin} />
+          </Route>
+          <Route exact path='/Register' component={Register} />
+        </Switch>
+      </Layout>
     </div>
   );
 }
