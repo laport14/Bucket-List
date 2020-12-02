@@ -48,10 +48,8 @@ function App() {
         currentUser={currentUser}
         handleLogout={handleLogout}
       >
-        <Switch>
-          <Route exact path='/'>
             <MainContainer currentUser={currentUser} />
-          </Route>
+        <Switch>
           <Route exact path='/Login'>
             <Login handleLogin={handleLogin} />
           </Route>

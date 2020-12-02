@@ -17,18 +17,17 @@ function MainContainer(props) {
   }, [])
 
   return (
-    <div>
+    <Switch>
+      <Route exact path='/'>
       <Landing />
-      <Switch>
-        <Route path='/Activities'>
+      </Route>
+        <Route exact path='/Activities'>
           <AllActivities
             activities={activities}
             currentUser={props.currentUser}
           />
         </Route>
-      </Switch>
-      
-    </div>
+    </Switch>
   );
 }
 
