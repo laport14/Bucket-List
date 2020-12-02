@@ -1,0 +1,11 @@
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.activities-hero-text {
+  text-align: left;
+  width: 30%;
+}

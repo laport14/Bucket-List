@@ -15,6 +15,9 @@ function Nav(props) {
         <div className='nav-button-div'>
           {currentUser ?
             <>
+              <Link to='/Activities' style={{textDecoration: 'none', color: '#ffffff'}}>
+                <p className='activity-nav-text'>All Activities</p>
+              </Link>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout} className='nav-button'>Logout</button>
             </>

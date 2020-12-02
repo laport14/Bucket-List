@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Switch, useHistory} from 'react-router-dom'
-import Landing from './screens/Landing/Landing';
+import MainContainer from './containers/MainContainer'
 import Login from './screens/Login/Login'
 import Register from './screens/Register/Register';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
@@ -48,8 +48,8 @@ function App() {
         currentUser={currentUser}
         handleLogout={handleLogout}
       >
+            <MainContainer currentUser={currentUser} />
         <Switch>
-          <Route exact path='/' component={Landing} />
           <Route exact path='/Login'>
             <Login handleLogin={handleLogin} />
           </Route>
