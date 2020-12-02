@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
+import ActivityDetail from '../screens/ActivityDetail/ActivityDetail';
 import AllActivities from '../screens/AllActivities/AllActivities';
 import Landing from '../screens/Landing/Landing';
 import {getAllActivities} from '../services/activities'
@@ -26,7 +27,11 @@ function MainContainer(props) {
             activities={activities}
             currentUser={props.currentUser}
           />
-        </Route>
+      </Route>
+      <Route exact path='/Activities/:id'>
+      <ActivityDetail />
+      </Route>
+
     </Switch>
   );
 }
