@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Layout from '../../components/shared/Layout/Layout';
 import './Login.css'
 
 function Login(props) {
