@@ -17,7 +17,6 @@ function Login(props) {
   }
 
   return (
-    <Layout>
       <div className='content-container'>
         <p className='hero-text'>Welcome Back</p>
         <p className='login-text'>Thank you for visit our site, we are excited to have you be apart of our community of dreamers</p>
@@ -25,23 +24,26 @@ function Login(props) {
           e.preventDefault()
           props.handleLogin(formData)
         }}>
-          <label htmlFor='name'>Username</label>
+          <label htmlFor='username'>Username</label>
           <input
             type='text'
-            name='name'
+            name='username'
+            value={formData.username}
+            onChange={handleChange}
             placeholder='Enter username'
           />
           <label htmlFor='password'>Password</label>
           <input
             type='password'
             name='password'
+            value={formData.password}
+            onChange={handleChange}
             placeholder='Enter password'
           />
           <button>Submit</button>
         </form>
       
       </div>
-    </Layout>
   );
 }
 

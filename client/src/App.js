@@ -3,8 +3,9 @@ import {Route, Switch, useHistory} from 'react-router-dom'
 import Landing from './screens/Landing/Landing';
 import Login from './screens/Login/Login'
 import Register from './screens/Register/Register';
-import { loginUser, verifyUser } from './services/auth';
-import { useEffect } from 'react';
+import { loginUser, removeToken, verifyUser } from './services/auth';
+import { useEffect, useState } from 'react';
+import Layout from './components/shared/Layout/Layout';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -27,14 +28,28 @@ function App() {
     history.push('/')
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken')
+    removeToken()
+    history.push('/')
+  }
+
 
   return (
     <div className="App">
-      <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/Login' component={Login} handleLogin={handleLogin} />
-        <Route exact path='/Register' component={Register} />
-      </Switch>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/Login'>
+            <Login handleLogin={handleLogin} />
+          </Route>
+          <Route exact path='/Register' component={Register} />
+        </Switch>
+      </Layout>
     </div>
   );
 }
