@@ -27,10 +27,11 @@
   height: 83vh;
   }
 
-  .hero-text {
-    font-size: 50px;
-    font-weight: bold;
-    }
+.hero-text {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+}
 
 a {
   text-decoration: none;
