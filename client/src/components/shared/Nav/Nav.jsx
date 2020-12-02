@@ -15,17 +15,17 @@ function Nav(props) {
         <div className='nav-button-div'>
           {currentUser ?
             <>
-              <Link to='/Activities' style={{textDecoration: 'none', color: '#ffffff'}}>
+              <Link to='/activities' style={{textDecoration: 'none', color: '#ffffff'}}>
                 <p className='activity-nav-text'>All Activities</p>
               </Link>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout} className='nav-button'>Logout</button>
             </>
             : <>
-              <Link to='/Login' style={{margin: '2%'}}>
+              <Link to='/login' style={{margin: '2%'}}>
               <button className='nav-button'>Login</button>
               </Link>
-              <Link to='/Register' style={{margin: '2%'}}>
+              <Link to='/register' style={{margin: '2%'}}>
                 <button className='nav-button'>Register</button>
               </Link>
               </>

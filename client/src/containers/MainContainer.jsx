@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
+import ActivityDetail from '../screens/ActivityDetail/ActivityDetail';
 import AllActivities from '../screens/AllActivities/AllActivities';
+import EditActivity from '../screens/EditActivity/EditActivity';
 import Landing from '../screens/Landing/Landing';
-import {getAllActivities} from '../services/activities'
+import {getAllActivities, putActivity} from '../services/activities'
 
 function MainContainer(props) {
   const [activities, setActivities] = useState([])
@@ -16,17 +18,32 @@ function MainContainer(props) {
     fetchActivities()
   }, [])
 
+  const handleUpdate = async (id, activityData) => {
+    const updatedActivity = await putActivity(id, activityData);
+    setActivities(prevState => prevState.map(activity => {
+      return activity.id === Number(id) ? updatedActivity : activity
+    }))
+    history.push('/activities');
+  }
+
   return (
     <Switch>
       <Route exact path='/'>
       <Landing />
       </Route>
-        <Route exact path='/Activities'>
+        <Route exact path='/activities'>
           <AllActivities
             activities={activities}
             currentUser={props.currentUser}
           />
-        </Route>
+      </Route>
+      <Route exact path='/activities/:id'>
+      <ActivityDetail />
+      </Route>
+      <Route exact path='/activities/:id/edit'>
+        <EditActivity activities={activities} handleUpdate={handleUpdate}/>
+      </Route>
+
     </Switch>
   );
 }

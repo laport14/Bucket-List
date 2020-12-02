@@ -7,7 +7,7 @@ function Landing(props) {
       <div className='content-container'>
         <div className='hero-container'>
           <p className='hero-text'>Achieve your dreams before the call of the grave</p>
-          <Link to='/Register'>
+          <Link to='/register'>
           <button className='global-button'>Join Today</button>
           </Link>
         </div>
