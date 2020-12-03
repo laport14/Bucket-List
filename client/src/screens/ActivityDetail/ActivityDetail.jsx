@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
+import Comments from '../../components/Comments/Comments';
 import {getOneActivity} from '../../services/activities'
+import { addComment } from '../../services/comments';
 
 function ActivityDetail(props) {
   const [activity, setActivity] = useState(null)
+  const [comments, setComments] = useState([])
+  const [commentChange, setCommentChange] = useState(false)
+  const [formData, setFormData] = useState({
+    comment: ""
+  })
 
   const { id } = useParams()
 
@@ -12,22 +19,37 @@ function ActivityDetail(props) {
     const fetchActivityItem = async () => {
       const activityData = await getOneActivity(id)
       setActivity(activityData)
+      setComments(activityData.comments)
+      setCommentChange(commentChange)
     }
     fetchActivityItem()
-  }, [id])
+  }, [id, commentChange])
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   const activity = await 
-  // }
+  const handleSubmit = async (id, formData) => {
+    await addComment(id, formData)
+    setCommentChange(!commentChange)
+    setFormData({comment:''})
+  }
 
-  // const handleChange = (e) => {
-  //   const { value } = e.target
-  //   set
-  // }
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  const commentsJSX = comments.map((comments, index) => (
+    <Comments 
+      comment={comments.comment}
+      username={comments.user.username}
+      key={index}
+    />
+  ))
 
   return (
     <div>
+      <div>
       <img src={activity?.image_url} alt='activity'/>
       <h2>{activity?.name}</h2>
       <p>{activity?.description}</p>
@@ -35,6 +57,23 @@ function ActivityDetail(props) {
       <p>{activity?.location}</p>
       <Link className='edit-link' to={`/activities/${id}/edit`}><button>Edit</button></Link>
       <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
+      </div>
+      <div>{commentsJSX}</div>
+
+      <div>
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          handleSubmit(id, formData)
+        }}>
+          <textarea
+            placeholder="Insert comment here"
+            name='comment'
+            value={formData.comment}
+            onChange={handleChange}
+          />
+          <button>Submit</button>
+        </form>
+      </div>
       
     </div>
   );
