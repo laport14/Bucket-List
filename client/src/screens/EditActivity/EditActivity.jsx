@@ -6,7 +6,8 @@ function EditActivity(props) {
     name: "",
     description: "",
     price: "",
-    location: ""
+    location: "",
+    image_url: ""
   })
 
   const { id } = useParams()
@@ -42,6 +43,13 @@ function EditActivity(props) {
         e.preventDefault()
         props.handleUpdate(id, formData)
       }}>
+        <label htmlFor='image_url'>Image URL</label>
+        <input
+          type='text'
+          name='image_url'
+          value={formData.image_url}
+          onChange={handleChange}
+        />
         <label htmlFor='name'>Name</label>
         <input
           type='text'

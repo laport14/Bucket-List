@@ -28,6 +28,7 @@ function ActivityDetail(props) {
 
   return (
     <div>
+      <img src={activity?.image_url} alt='activity'/>
       <h2>{activity?.name}</h2>
       <p>{activity?.description}</p>
       <p>{activity?.price}</p>

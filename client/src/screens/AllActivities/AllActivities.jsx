@@ -17,6 +17,7 @@ function AllActivities(props) {
   return (
     <div>
       <h2 className='activities-hero-text'>What do you want to do before you die?</h2>
+      <Link to='/activities/new'><button>Add An Activity</button></Link>
       <div className='activities'>{activitiesJSX}</div>
     </div>
   );
