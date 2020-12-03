@@ -7,6 +7,9 @@ import {getOneActivity} from '../../services/activities'
 function ActivityDetail(props) {
   const [activity, setActivity] = useState(null)
   const [comments, setComments] = useState([])
+  const [formData, setFormData] = useState({
+    comment: ""
+  })
 
   const { id } = useParams()
 
@@ -24,10 +27,13 @@ function ActivityDetail(props) {
   //   const activity = await 
   // }
 
-  // const handleChange = (e) => {
-  //   const { value } = e.target
-  //   set
-  // }
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
 
   const commentsJSX = comments.map((comments, index) => (
     <Comments 
@@ -49,6 +55,17 @@ function ActivityDetail(props) {
       <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
       </div>
       <div>{commentsJSX}</div>
+
+      <div>
+        <form>
+          <textarea
+            placeholder="Insert comment here"
+            name='comment'
+            value={formData.comment}
+            onChange={handleChange}
+          />
+        </form>
+      </div>
       
     </div>
   );
