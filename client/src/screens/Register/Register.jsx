@@ -24,40 +24,45 @@ function Register(props) {
         e.preventDefault()
         props.handleRegister(formData)
       }}>
-        <h2>Register</h2> 
-        <label htmlFor='username'>Username</label>
+        <h2 className='login-form-text'>Sign up for an Account</h2> 
+        <label htmlFor='username'></label>
         <input
           type='text'
           name='username'
+          className='login-input'
           value={formData.username}
           onChange={handleChange}
           placeholder='Enter Username'
+          autoFocus
         />
-        <label htmlFor='email'>Email</label>
+        <label htmlFor='email'></label>
         <input
           type='email'
           name='email'
+          className='login-input'
           value={formData.email}
           onChange={handleChange}
           placeholder='Enter Email'
         />
-        <label htmlFor='password'>Password</label>
+        <label htmlFor='password'></label>
         <input
           type='password'
           name='password'
+          className='login-input'
           value={formData.password}
           onChange={handleChange}
           placeholder='Enter Password'
         />
-        <label htmlFor='image_url'>Image_URL</label>
+        <label htmlFor='image_url'></label>
         <input
           type='text'
           name='image_url'
+          className='login-input'
           value={formData.image_url}
           onChange={handleChange}
           placeholder='Insert Image URL'
         />
-        <button>Submit</button>
+        <button className='submit-button'>Submit</button>
       </form>
       </div>
   );

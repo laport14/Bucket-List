@@ -23,24 +23,27 @@ function Login(props) {
           e.preventDefault()
           props.handleLogin(formData)
       }}>
-        <h2>Login</h2>
-          <label htmlFor='username'>Username</label>
-          <input
+        <h2 className='login-form-text'>Login</h2>
+          <label htmlFor='username'></label>
+        <input
+            className='login-input'
             type='text'
             name='username'
             value={formData.username}
             onChange={handleChange}
-            placeholder='Enter username'
+          placeholder='Enter username'
+          autoFocus
           />
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'></label>
           <input
+            className='login-input'
             type='password'
             name='password'
             value={formData.password}
             onChange={handleChange}
             placeholder='Enter password'
           />
-          <button>Submit</button>
+        <button className='submit-button'>Submit</button>
         </form>
       
       </div>

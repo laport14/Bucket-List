@@ -1,7 +1,12 @@
 .register-form {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  width: 20%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 450px;
+  height: 450px;
   margin: 0 auto;
+  background-color: #ffffff;
+  align-items: flex-start;
+  padding-left: 75px;
 }
+
