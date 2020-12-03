@@ -34,7 +34,7 @@ function ActivityDetail(props) {
       <p>{activity?.price}</p>
       <p>{activity?.location}</p>
       <Link className='edit-link' to={`/activities/${id}/edit`}><button>Edit</button></Link>
-      <button>Delete</button>
+      <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
       
     </div>
   );
