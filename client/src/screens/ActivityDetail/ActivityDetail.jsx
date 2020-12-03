@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Comments from '../../components/Comments/Comments';
 import {getOneActivity} from '../../services/activities'
 import { addComment } from '../../services/comments';
