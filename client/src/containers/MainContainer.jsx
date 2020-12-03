@@ -5,7 +5,7 @@ import AddActivity from '../screens/AddActivity/AddActivity';
 import AllActivities from '../screens/AllActivities/AllActivities';
 import EditActivity from '../screens/EditActivity/EditActivity';
 import Landing from '../screens/Landing/Landing';
-import {getAllActivities, postActivity, putActivity} from '../services/activities'
+import {destroyActivity, getAllActivities, postActivity, putActivity} from '../services/activities'
 
 function MainContainer(props) {
   const [activities, setActivities] = useState([])
@@ -33,6 +33,12 @@ function MainContainer(props) {
     history.push('/activities');
   }
 
+  const handleDelete = async (id) => {
+    await destroyActivity(id);
+    setActivities(prevState => prevState.filter(activity => activity.id !== id))
+    history.push('/activities')
+  }
+
   return (
     <Switch>
       <Route exact path='/'>
@@ -48,7 +54,9 @@ function MainContainer(props) {
         <AddActivity handleCreate={handleCreate} />
       </Route>
       <Route exact path='/activities/:id'>
-      <ActivityDetail />
+        <ActivityDetail
+          handleDelete={handleDelete}
+        />
       </Route>
       <Route exact path='/activities/:id/edit'>
         <EditActivity activities={activities} handleUpdate={handleUpdate}/>

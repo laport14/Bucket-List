@@ -12,7 +12,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1
   def show
-    render json: @activity, include: :comments
+    render json: @activity, :include => {:comments => {:include => :user}}, status: :ok
   end
 
   # POST /activities
