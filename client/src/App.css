@@ -32,3 +32,32 @@
   font-weight: bold;
   font-family: 'Bebas Neue', sans-serif;
 }
+
+.login-input {
+  width: 300px;
+  height: 40px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.login-input::placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.515);
+}
+
+.submit-button {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10%;
+}
+
+.login-form-text {
+  margin-top: 10%;
+}
