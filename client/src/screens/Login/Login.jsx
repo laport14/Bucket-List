@@ -18,7 +18,7 @@ function Login(props) {
   return (
       <div className='content-container'>
         <p className='hero-text'>Welcome Back</p>
-        <p className='login-text'>Thank you for visit our site, we are excited to have you be apart of our community of dreamers</p>
+        <p className='login-text'>Thank you for visiting our site, we are excited to have you be apart of our community of dreamers</p>
         <form className='login-form' onSubmit={(e) => {
           e.preventDefault()
           props.handleLogin(formData)
