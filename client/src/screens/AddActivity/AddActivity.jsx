@@ -19,12 +19,12 @@ function AddActivity(props) {
 
 
   return (
-    <div>
+    <div className='content-container'>
       <form onSubmit={(e) => {
         e.preventDefault()
         props.handleCreate(formData)
       }}>
-        <h3>Create a Bucket-List Activity</h3>
+        <h3 className='login-form-text'>Create a Bucket-List Activity</h3>
         <label htmlFor='image_url'>Image URL</label>
         <input
           type='text'

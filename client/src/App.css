@@ -25,6 +25,13 @@
   justify-content: center;
   background-color: #FFC4C3;
   height: 83vh;
+  background-image: url("https://github.com/laport14/Bucket-List/blob/development/client/src/assets/background-image.jpeg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 83vh;
+  min-width: 100vw;
+  z-index: -1;
   }
 
 .hero-text {

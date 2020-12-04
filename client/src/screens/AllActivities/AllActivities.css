@@ -1,3 +1,14 @@
+.all-activities-container {
+  background-color: #FFC4C3;
+  background-image: url("https://github.com/laport14/Bucket-List/blob/development/client/src/assets/background-image.jpeg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: -1;
+}
+
 .activities {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +24,14 @@
   padding-top: 20px;
 }
 
-.all-activities-container {
-  
+.submit-button-activities {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
