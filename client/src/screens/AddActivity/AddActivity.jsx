@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import './AddActivity.css'
 
 function AddActivity(props) {
   const [formData, setFormData] = useState({
@@ -20,47 +21,59 @@ function AddActivity(props) {
 
   return (
     <div className='content-container'>
+      <h3 className='hero-text'>Create a Bucket-List Activity</h3>
       <form onSubmit={(e) => {
         e.preventDefault()
         props.handleCreate(formData)
-      }}>
-        <h3 className='login-form-text'>Create a Bucket-List Activity</h3>
-        <label htmlFor='image_url'>Image URL</label>
+        
+      }} className='add-activity-form'>
+        <h2 className='login-form-text'>Add an Activity or Idea</h2>
+        <label htmlFor='image_url'></label>
         <input
           type='text'
           name='image_url'
+          className='login-input'
+          placeholder='Insert Image URL'
           value={formData.image_url}
           onChange={handleChange}
         />
-        <label htmlFor='name'>Name</label>
+        <label htmlFor='name'></label>
         <input
           type='text'
           name='name'
+          className='login-input'
+          placeholder='Enter Activity Title'
           value={formData.name}
           onChange={handleChange}
         />
-        <label htmlFor='description'>Description</label>
-        <input
-          type='text'
-          name='description'
-          value={formData.description}
-          onChange={handleChange}
-        />
-        <label htmlFor='price'>Price</label>
+        <label htmlFor='description'></label>
+        <label htmlFor='price'></label>
         <input
           type='text'
           name='price'
+          className='login-input'
+          placeholder='Enter Activity Price'
           value={formData.price}
           onChange={handleChange}
         />
-        <label htmlFor='location'>Location</label>
+        <label htmlFor='location'></label>
         <input
           type='text'
           name='location'
+          className='login-input'
+          placeholder='Enter Activity Location'
           value={formData.location}
           onChange={handleChange}
         />
-        <button>Submit</button>
+        <textarea
+          type='text'
+          name='description'
+          className='textarea-input'
+          placeholder='Enter Activity Description'
+          value={formData.description}
+          onChange={handleChange}
+        />
+        <button className='add-submit-button'>Submit</button>
       </form>
       
     </div>
