@@ -7,9 +7,35 @@
   transition: 250ms all;
   padding: 20px;
   margin-bottom: 60px;
-  max-width: 325px;
-  min-width: 325px;
-  min-height: 385px;
+  width: 450px;
+  height: 300px;
   text-decoration: none;
   color: #3d3c3c;
+  text-align: left;
+}
+
+.activity-image {
+ width: 200px;
+ height: 200px;
+ border-radius: 50%;
+ text-align: center;
+ margin-right: 230px;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 26px;
+  width: 90%;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 10px;
+}
+
+.card-description {
+  text-align: left;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

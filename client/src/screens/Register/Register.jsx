@@ -1,5 +1,6 @@
 import './Register.css'
 import { useState } from 'react';
+import backgroundImage from "../../assets/background-image.jpeg"
 
 function Register(props) {
   const [formData, setFormData] = useState({
@@ -16,8 +17,18 @@ function Register(props) {
       [name]: value
     }))
   }
+  let backgroundStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: `cover`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: `center center`,
+    minHeight: `100vh`,
+    minWidth: `100vw`,
+    zIndex: `-1`,
+  };
+
   return (
-    <div className='content-container'>
+    <div className='content-container' style={ backgroundStyle }>
       <p className='hero-text'>Ready to make your wildest dreams come true?</p>
       <p>Bucket-List is an application where you can post your bucket list activities and ideas to the site and have other members give support by commenting on your posts! Share the site with your family and friends so they can join with you!</p>
       <form className='register-form' onSubmit={(e) => {

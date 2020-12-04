@@ -8,6 +8,7 @@ function AllActivities(props) {
   const activitiesJSX = props.activities.map((activity, index) => (
     <Activity
       id={activity.id}
+      image_url={activity.image_url}
       name={activity.name}
       description={activity.description}
       key={index}
@@ -15,7 +16,7 @@ function AllActivities(props) {
   ))
 
   return (
-    <div>
+    <div className='all-activities-container'>
       <h2 className='activities-hero-text'>What do you want to do before you die?</h2>
       <Link to='/activities/new'><button>Add An Activity</button></Link>
       <div className='activities'>{activitiesJSX}</div>

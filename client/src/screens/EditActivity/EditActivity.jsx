@@ -25,7 +25,7 @@ function EditActivity(props) {
     if (props.activities.length) {
       prefillForm()
     }
-  }, [props.activities])
+  }, [props.activities, id])
 
   const handleChange = (e) => {
     const { name, value } = e.target

@@ -1,6 +1,15 @@
+/* reference for animation https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=animation&demo=bgGradient&mode=redwood_port */
+
 .footer-container {
-  background-color: #1F5E57;
-  bottom: 0;
+  background: linear-gradient(-45deg, #003C3E, #1F5E57, #D2002A, #FF717A, #FFC4CE, #FF717A, #D2002A, #1F5E57, #003C3E);
+  background-size: 700% 700%;
+  animation: Gradient 25s ease-in-out infinite;
   width: 100vw;
   height: 5vh;
+}
+
+@keyframes Gradient {
+  0%{background-position: 0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position: 0% 50%}
 }
