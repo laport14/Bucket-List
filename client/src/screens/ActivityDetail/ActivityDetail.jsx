@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Comments from '../../components/Comments/Comments';
 import {getOneActivity} from '../../services/activities'
 import { addComment } from '../../services/comments';
+import './ActivityDetail.css'
 
 function ActivityDetail(props) {
   const [activity, setActivity] = useState(null)
@@ -48,9 +49,12 @@ function ActivityDetail(props) {
   ))
 
   return (
-    <div>
-      <div>
-      <img src={activity?.image_url} alt='activity'/>
+    <div className='detail-parent-container'>
+    <div className='activity-detail-container'>
+      <div className='activity-detail-component'>
+      <img className='activity-detail-image' src={activity?.image_url} alt='activity'/>
+      </div>
+      <div className='activity-descriptive-content'>
       <h2>{activity?.name}</h2>
       <p>{activity?.description}</p>
       <p>{activity?.price}</p>
@@ -58,9 +62,10 @@ function ActivityDetail(props) {
       <Link className='edit-link' to={`/activities/${id}/edit`}><button>Edit</button></Link>
       <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
       </div>
-      <div>{commentsJSX}</div>
+    </div>
 
       <div>
+      <div>{commentsJSX}</div>
         <form onSubmit={(e) => {
           e.preventDefault()
           handleSubmit(id, formData)
@@ -74,6 +79,7 @@ function ActivityDetail(props) {
           <button>Submit</button>
         </form>
       </div>
+      
       
     </div>
   );
