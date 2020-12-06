@@ -63,14 +63,17 @@ function ActivityDetail(props) {
           }
       </div>
       <div className='activity-descriptive-content'>
-      <h2 className='activity-name'>{activity?.name}</h2>
-      <p className='descriptive-text'>{activity?.description}</p>
-      <p className='descriptive-text'>Price: {activity?.price}</p>
-          <p className='descriptive-text'>Location: {activity?.location}</p>
+        <h2 className='activity-name'>{activity?.name}</h2>
+        <p className='descriptive-text'>{activity?.description}</p>
+        <p className='descriptive-text'>Price: {activity?.price}</p>
+        <p className='descriptive-text'>Location: {activity?.location}</p>
+          {
+            activity?.user_id === props.currentUser?.id &&
           <div>
-      <Link className='edit-link' to={`/activities/${id}/edit`}><button className='edit-button'>Edit</button></Link>
-      <button className='delete-button' onClick={() => props.handleDelete(activity.id)}>Delete</button>
-      </div>
+            <Link className='edit-link' to={`/activities/${id}/edit`}><button className='edit-button'>Edit</button></Link>
+            <button className='delete-button' onClick={() => props.handleDelete(activity.id)}>Delete</button>
+          </div>
+          }
       </div>
     </div>
 
@@ -94,8 +97,6 @@ function ActivityDetail(props) {
           </form>
         </div>
       </div>
-      
-      
     </div>
   );
 }
