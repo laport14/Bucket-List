@@ -1,0 +1,32 @@
+.add-activity-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 450px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  align-items: flex-start;
+  padding-left: 75px;
+  margin-bottom: 50px;
+}
+
+.textarea-input {
+  width: 300px;
+  height: 220px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.add-submit-button {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}

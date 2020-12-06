@@ -1,0 +1,12 @@
+.comment {
+  width: 475px;
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+}

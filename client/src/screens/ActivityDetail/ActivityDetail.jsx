@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import Comments from '../../components/Comments/Comments';
 import {getOneActivity} from '../../services/activities'
 import { addComment } from '../../services/comments';
+import Image from '../../assets/broken-image.jpeg'
+import './ActivityDetail.css'
 
 function ActivityDetail(props) {
   const [activity, setActivity] = useState(null)
@@ -48,32 +50,51 @@ function ActivityDetail(props) {
   ))
 
   return (
-    <div>
-      <div>
-      <img src={activity?.image_url} alt='activity'/>
-      <h2>{activity?.name}</h2>
-      <p>{activity?.description}</p>
-      <p>{activity?.price}</p>
-      <p>{activity?.location}</p>
-      <Link className='edit-link' to={`/activities/${id}/edit`}><button>Edit</button></Link>
-      <button onClick={() => props.handleDelete(activity.id)}>Delete</button>
+    <div className='detail-parent-container'>
+    <div className='activity-detail-container'>
+        <div className='activity-detail-component'>
+          {
+            activity?.image_url === null ?
+            <>
+            <img className='activity-detail-image' src={Image} alt='activity'/> 
+            </>
+              :
+            <img className='activity-detail-image' src={activity?.image_url} alt='activity'/>
+          }
       </div>
-      <div>{commentsJSX}</div>
+      <div className='activity-descriptive-content'>
+      <h2 className='activity-name'>{activity?.name}</h2>
+      <p className='descriptive-text'>{activity?.description}</p>
+      <p className='descriptive-text'>Price: {activity?.price}</p>
+          <p className='descriptive-text'>Location: {activity?.location}</p>
+          <div>
+      <Link className='edit-link' to={`/activities/${id}/edit`}><button className='edit-button'>Edit</button></Link>
+      <button className='delete-button' onClick={() => props.handleDelete(activity.id)}>Delete</button>
+      </div>
+      </div>
+    </div>
 
-      <div>
+      <div className='comment-container'>
+        <div className='comments-child'>{commentsJSX}</div>
+        <div>
+          <h2 className='comment-heading'>Comment on a bucket list Activity</h2>
         <form onSubmit={(e) => {
           e.preventDefault()
           handleSubmit(id, formData)
-        }}>
+          
+        }}className='form-comments'>
           <textarea
             placeholder="Insert comment here"
             name='comment'
+            className='textarea-detail'
             value={formData.comment}
             onChange={handleChange}
           />
-          <button>Submit</button>
-        </form>
+          <button className='comment-button'>Submit</button>
+          </form>
+        </div>
       </div>
+      
       
     </div>
   );

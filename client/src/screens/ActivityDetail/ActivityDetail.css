@@ -1,0 +1,106 @@
+.detail-parent-container {
+  background-color: #FFC4C3;
+  background-image: url("https://github.com/laport14/Bucket-List/blob/development/client/src/assets/background-image.jpeg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 83vh;
+  min-width: 100vw;
+  z-index: -1;
+}
+
+
+.activity-detail-container {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 90%;
+margin: 0 auto;
+padding-top: 50px;
+}
+
+.activity-descriptive-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 500px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  margin-top: 20px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.activity-detail-image {
+  width: 500px;
+  height: 400px;
+  padding-top: 10px;
+}
+
+.comments-child {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 275px;
+  
+}
+
+.descriptive-text {
+text-align: left;
+}
+
+.edit-button {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.delete-button {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+.textarea-detail {
+  width: 500px;
+  height: 140px;
+}
+
+.form-comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-button {
+  width: 130px;
+  height: 40px;
+  background-color: #FF717A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+.comment-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.activity-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+}
