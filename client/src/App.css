@@ -69,3 +69,23 @@
 .login-form-text {
   margin-top: 10%;
 }
+
+@media only screen and (max-width: 850px) {
+
+  .hero-text {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .hero-text {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+}
