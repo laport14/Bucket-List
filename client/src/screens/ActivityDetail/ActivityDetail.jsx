@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Comments from '../../components/Comments/Comments';
 import {getOneActivity} from '../../services/activities'
 import { addComment } from '../../services/comments';
+import Image from '../../assets/broken-image.jpeg'
 import './ActivityDetail.css'
 
 function ActivityDetail(props) {
@@ -51,8 +52,15 @@ function ActivityDetail(props) {
   return (
     <div className='detail-parent-container'>
     <div className='activity-detail-container'>
-      <div className='activity-detail-component'>
-      <img className='activity-detail-image' src={activity?.image_url} alt='activity'/>
+        <div className='activity-detail-component'>
+          {
+            activity?.image_url === null ?
+            <>
+            <img className='activity-detail-image' src={Image} alt='activity'/> 
+            </>
+              :
+            <img className='activity-detail-image' src={activity?.image_url} alt='activity'/>
+          }
       </div>
       <div className='activity-descriptive-content'>
       <h2 className='activity-name'>{activity?.name}</h2>

@@ -5,7 +5,12 @@ import Logo from '../../../assets/logo3.png'
 
 function Nav(props) {
   const { currentUser, handleLogout } = props
-  
+
+  function titleCase(str) {
+    currentUser.username = str.toLowerCase().split(' ').map((str) => str.charAt(0).toUpperCase() + str.substring(1)).join(' ')
+    return str
+  }
+
   return (
     <div className='nav-bar'>
       <div className='nav-contents'>
@@ -15,7 +20,7 @@ function Nav(props) {
         <div className='nav-button-div'>
           {currentUser ?
             <>
-              <p className='welcome-user'> Welcome {currentUser.username}</p>
+              <p className='welcome-user'> Welcome {titleCase(currentUser.username)}</p>
               <Link to='/activities'>
                 <button className='nav-activity-button'>All Activities</button>
               </Link>

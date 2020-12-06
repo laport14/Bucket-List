@@ -16,12 +16,14 @@ flex-direction: row;
 justify-content: space-evenly;
 width: 90%;
 margin: 0 auto;
+padding-top: 50px;
 }
 
 .activity-descriptive-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 500px;
 }
 
 .comment-container {
@@ -30,7 +32,8 @@ margin: 0 auto;
   justify-content: space-evenly;
   width: 90%;
   margin-top: 20px;
-  margin-left: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
 .activity-detail-image {
