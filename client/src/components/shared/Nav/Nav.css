@@ -96,3 +96,56 @@ justify-content: flex-end;
 .activity-nav-text {
   font-size: 15px;
 }
+
+@media only screen and (max-width: 850px) {
+
+  .nav-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-login-button {
+    width: 150px;
+  }
+  
+  .nav-activity-button {
+    width: 150px;
+   
+  }
+
+  .nav-button {
+    width: 150px;
+    
+  }
+
+
+}
+
+@media only screen and (max-width: 670px) {
+
+  .nav-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .nav-login-button {
+    font-size: 16px;
+    width: 125px;
+  }
+  
+  .nav-activity-button {
+    width: 125px;
+  }
+
+  .nav-button {
+    width: 125px;
+  }
+
+  .welcome-user {
+    display: none;
+  }
+
+}
+
+
+

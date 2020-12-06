@@ -56,6 +56,7 @@ function MainContainer(props) {
       <Route exact path='/activities/:id'>
         <ActivityDetail
           handleDelete={handleDelete}
+          currentUser={props.currentUser}
         />
       </Route>
       <Route exact path='/activities/:id/edit'>
