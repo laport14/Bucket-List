@@ -118,3 +118,37 @@ text-align: left;
     }
 
 }
+
+@media only screen and (max-width: 670px) {
+  
+  .activity-detail-image {
+    width: 300px;
+    height: 200px;
+    padding-top: 10px;
+  }
+
+  .activity-descriptive-content {
+    width: 300px;
+  }
+
+  .comments-child {
+    margin: 0 auto;
+  }
+
+  .form-comments {
+    margin: 0 auto;
+  }
+
+  .textarea-detail {
+    width: 325px;
+    
+  }
+
+  .comment-heading {
+    font-size: 25px;
+  }
+
+  .activity-name {
+    font-size: 25px;
+  }
+}

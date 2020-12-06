@@ -16,3 +16,10 @@
     margin: 7px;
   }
 }
+
+@media only screen and (max-width: 670px) {
+  .comment {
+  width: 300px;
+  height: 150px;
+  }
+}
