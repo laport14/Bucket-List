@@ -33,7 +33,7 @@ padding-top: 50px;
   width: 90%;
   margin-top: 20px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .activity-detail-image {
@@ -47,7 +47,6 @@ padding-top: 50px;
   flex-direction: column;
   overflow-y: scroll;
   height: 275px;
-  
 }
 
 .descriptive-text {
@@ -103,4 +102,19 @@ text-align: left;
 .activity-name {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 30px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .activity-detail-container {
+    display: grid;
+    }
+    
+    .comment-container {
+      display: grid;
+    }
+
+    .comment-button {
+      margin-bottom: 5px;
+    }
+
 }

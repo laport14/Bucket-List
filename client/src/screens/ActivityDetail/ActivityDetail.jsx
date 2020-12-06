@@ -78,6 +78,7 @@ function ActivityDetail(props) {
     </div>
 
       <div className='comment-container'>
+        
         <div className='comments-child'>{commentsJSX}</div>
         <div>
           <h2 className='comment-heading'>Comment on a bucket list Activity</h2>

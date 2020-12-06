@@ -10,3 +10,9 @@
   padding: 10px;
   background-color: #ffffff;
 }
+
+@media only screen and (max-width: 1439px) {
+  .comment {
+    margin: 7px;
+  }
+}
