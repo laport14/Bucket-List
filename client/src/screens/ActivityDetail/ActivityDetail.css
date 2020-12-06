@@ -18,10 +18,6 @@ width: 90%;
 margin: 0 auto;
 }
 
-.activity-detail-component {
-
-}
-
 .activity-descriptive-content {
   display: flex;
   flex-direction: column;
