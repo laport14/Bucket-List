@@ -50,3 +50,28 @@
   text-align: left;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 850px){
+
+  .edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+  }
+
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin: 0 auto;
+}
+}
+
+@media only screen and (max-width: 670px){
+
+    .edit-image {
+    width: 300px;
+    height: 210px;
+    }
+}

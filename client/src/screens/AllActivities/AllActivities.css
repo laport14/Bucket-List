@@ -37,3 +37,25 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 800px) {
+  .activities-hero-text {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .activities-hero-text {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+  }
+
+  
+
+}
