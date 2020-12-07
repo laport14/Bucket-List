@@ -1,5 +1,9 @@
 # Bucket-List
 
+## Deployed Link
+
+https://the-only-bucket-list.netlify.app/
+
 ## Overview
 
 Have you ever wanted an application that hosts your bucket list activities so you can reference them anytime you want? **Bucket-List** is a website that does just that -it allows users to post and save their bucket list activities on one site. Posts are public which allow other members to comment on the activities and provide feedback/support to the user who posted the bucket list activity. Users are encouraged to share the website with their friends and family who can comment on activities that they would like to join in on. 
@@ -102,24 +106,24 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby Boilerplate    |    H     |     3 hrs      |     TBD     |    TBD    |
-| Setup models, controllers and routes    |    H     |     3 hrs      |     TBD     |    TBD    |
-| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Seed Data |    L     |     4 hrs      |     TBD     |     TBD     |
-| Test Data/Routes with Postico and Postman |    M     |     1 hr      |     TBD     |     TBD     |
-| Connect Backend with Frontend |    H     |     1 hr      |     TBD     |     TBD     |
-| Create Login Form |    H     |     2 hrs      |     TBD     |     TBD     |
-| Create Register Form |    H     |     3 hrs      |     TBD     |     TBD     |
-| User Auth Logic Front/Backend |    H     |     5 hrs      |     TBD     |     TBD     |
-| Render All Activity |    H     |     3 hrs      |     TBD     |     TBD     |
-| Implement CRUD on Front End |    H     |     6 hrs      |     TBD     |     TBD     |
-| Implement Comments on Activity Detail Page |    H     |     6 hrs      |     TBD     |     TBD     |
-| CSS Styling Basic |    H     |     3 hrs      |     TBD     |     TBD     |
-| CSS Styling Advanced |    M     |     5 hrs      |     TBD     |     TBD     |
-| Mobile Queries |    M     |     2 hrs      |     TBD     |     TBD     |
-| Debugging |    H     |     6 hrs      |     TBD     |     TBD     |
-| Deployment |    H     |     3 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     59 hrs      |     TBD     |     TBD     |
+| Setup Ruby Boilerplate    |    H     |     3 hrs      |     3 hrs     |    3 hrs    
+| Setup models, controllers and routes    |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| Create Seed Data |    L     |     4 hrs      |     4 hrs     |     4 hrs     |
+| Test Data/Routes with Postico and Postman |    M     |     1 hr      |     1 hr     |     1 hr     |
+| Connect Backend with Frontend |    H     |     1 hr      |     1 hr     |     1 hr     |
+| Create Login Form |    H     |     2 hrs      |     2 hrs     |     2 hrs     |
+| Create Register Form |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| User Auth Logic Front/Backend |    H     |     5 hrs      |     5 hrs     |     5 hrs     |
+| Render All Activity |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| Implement CRUD on Front End |    H     |     6 hrs      |     6 hrs     |     6 hrs     |
+| Implement Comments on Activity Detail Page |    H     |     6 hrs      |     6 hrs     |     6 hrs     |
+| CSS Styling Basic |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| CSS Styling Advanced |    M     |     5 hrs      |     5 hrs     |     5 hrs     |
+| Mobile Queries |    M     |     2 hrs      |     2 hrs     |     2 hrs     |
+| Debugging |    H     |     6 hrs      |     6 hrs     |     6 hrs     |
+| Deployment |    H     |     3 hrs      |     3 hrs     |     3 hrs     |
+| TOTAL               |          |     59 hrs      |     59 hrs     |     59 hrs     |
 
 
 <br>
@@ -146,8 +150,16 @@ https://drive.google.com/file/d/1d24SUm_2Cw-WJfTTnXXNypSUAO-Llyj0/view?usp=shari
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> used the titlecase algo on the front end in order to capitalize the first and last name of users in the header.
+
+```
+function titleCase(str) {
+    currentUser.username = str.toLowerCase().split(' ').map((str) => str.charAt(0).toUpperCase() + str.substring(1)).join(' ')
+    return str
+  }
+
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> Roadblocked with rendering comments on the the respective activity page. Ended up using includes in the backend in order to get comments to show up, also did the same for users so I could render the users name with their respective comment.
